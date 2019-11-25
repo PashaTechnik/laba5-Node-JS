@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Laba 7</title>
+</head>
+<script>
+function table(form){
+    var a = form.num.value;
+    var color = form.col.value;
+    document.getElementById(a).style.background=color;
+    
+}
+function table1(form){
+    var pict = "url('/Users/admin/Desktop/laba5-Node-JS/Laba 7/"+form.lan.value + ".png')";
+
+    document.getElementById("lang").style.backgroundImage=pict;
+    console.log(pict);
+}
+</script>
+<body>
+    <form name="test">
+    <h3>Виберіть номір комірки</h3><br>
+    <select size=9 name="num" style="width: 50px;text-align:center" >
+        <option value="1">1<br>
+        <option value="2">2<br>
+        <option value="3">3<br>
+        <option value="4">4<br>
+        <option value="5">5<br>
+        <option value="6">6<br>
+        <option value="7">7<br>
+        <option value="8">8<br>
+        <option value="9">9<br>
+    </select>
+    <h3>Виберіть ефект комірки</h3>
+    <div style="float: left">
+        <h4>&#8195Колір&#8195&#8195</h4>
+        <select size=9 name="col" style="text-align:center" onchange="table(test)">
+            <option value="red">Червоний<br>
+            <option value="black">Чорний<br>
+            <option value="green">Зелений<br>
+            <option value="grey">Сірий<br>
+            <option value="DeepPink">Рожевий<br>
+            <option value="Orange">Оранжевий<br>
+            <option value="Yellow">Жовтий<br>
+            <option value="Blue">Синій<br>
+            <option value="Purple">Фіолетовий<br>
+        </select>
+    </div>
+    <div style="float: left">
+        <h4 >Картинка</h4>
+        <select size=9 name="lan" style="text-align:center" onchange="table1(test)">
+            <option value="1">C++<br>
+            <option value="2">JavaScript<br>
+            <option value="3">Node.js<br>
+            <option value="4">Python<br>
+            <option value="5">Ruby<br>
+            <option value="6">C#<br>
+            <option value="7">Java<br>
+            <option value="8">PHP<br>
+            <option value="9">Rust<br>
+        </select>
+    </div>
+    <br>
+    <center>
+            <table align="center" border="1" height="500px" width="500px" id = "lang" >
+                <tr>
+                    <td id="1" ></td>
+                    <td id="2" ></td>
+                    <td id="3" ></td>
+                </tr>
+                <tr>
+                    <td id="4" ></td>
+                    <td id="5" ></td>
+                    <td id="6" ></td>
+                </tr>
+                <tr>
+                    <td id="7" ></td>
+                    <td id="8" ></td>
+                    <td id="9" ></td>
+                </tr>
+    
+            </table>
+        </center>
+</form>
+</body>
+
+</html>
