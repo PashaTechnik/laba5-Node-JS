@@ -10,6 +10,8 @@ server.listen(port, hostname, () => {
  console.log(`Server running at http://${hostname}:${port}/`)
 })*/
 
+
+
 const PORT = process.env.PORT || 3000;
 const http = require('http')
 const fs = require("fs");
@@ -18,7 +20,7 @@ const fs = require("fs");
 const server = http.createServer((req, response) => {
  response.statusCode = 200
  response.setHeader("Content-Type", "text/html")
- fs.readFile("/Users/admin/Desktop/laba5-Node-JS/Laba_9/index.html", null, (error, data) => {
+ fs.readFile("./laba9.html", null, (error, data) => {
   if (error) {
     response.writeHead(404);
     response.write("Whoops! File not found!");
