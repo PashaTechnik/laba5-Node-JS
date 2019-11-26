@@ -11,26 +11,22 @@ server.listen(port, hostname, () => {
 })*/
 
 
-
-const PORT = process.env.PORT || 3000;
-const http = require('http')
+const http = require("http");
 const fs = require("fs");
-//const hostname = '127.0.0.1'
-//const port = 3000
-const server = http.createServer((req, response) => {
- response.statusCode = 200
- response.setHeader("Content-Type", "text/html")
- fs.readFile("./laba9.html", null, (error, data) => {
-  if (error) {
-    response.writeHead(404);
-    response.write("Whoops! File not found!");
-  } else {
-    response.write(data);
-  }
-  response.end();
+
+const handleRequest = (request, response) => {
+  response.writeHead(200, {
+    "Content-Type": "text/html"
   });
- //res.end('Hi there!\n')
-})
-server.listen(PORT, () => {
- console.log(`Server running`)
-})
+  fs.readFile("./laba9.html", null, (error, data) => {
+    if (error) {
+      response.writeHead(404);
+      response.write("Whoops! File not found!");
+    } else {
+      response.write(data);
+    }
+    response.end();
+  });
+};
+
+http.createServer(handleRequest).listen(3000);
