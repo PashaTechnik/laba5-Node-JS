@@ -13,12 +13,12 @@ server.listen(port, hostname, () => {
 const PORT = process.env.PORT || 3000;
 const http = require('http')
 const fs = require("fs");
-const hostname = '127.0.0.1'
-const port = 3000
+//const hostname = '127.0.0.1'
+//const port = 3000
 const server = http.createServer((req, response) => {
  response.statusCode = 200
  response.setHeader("Content-Type", "text/html")
- fs.readFile("/Users/admin/Desktop/laba5-Node-JS/Laba 7/index.html", null, (error, data) => {
+ fs.readFile("/Users/admin/Desktop/laba5-Node-JS/Laba_9/index.html", null, (error, data) => {
   if (error) {
     response.writeHead(404);
     response.write("Whoops! File not found!");
