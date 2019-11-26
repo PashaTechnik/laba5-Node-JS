@@ -4,14 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index",
-    "lint": "",
-    "prettier": "prettier --config .prettierrc.json --write src/**/*.js",
-    "doc": "esdoc --out docs/src/ --readme ./README.md",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "precommit": "npm run prettier && npm run lint",
-    "prepush": "echo 'commit'"
+    "test": "npm run lint",
+    "start": "node lab5.js",
+    "lint": "eslint ."
   },
   "dependencies": {
     "loadash": "^1.0.0",
@@ -24,15 +19,9 @@
     "husky": "^3.1.0",
     "mocha": "^6.2.2",
     "prettier": "^1.19.1",
-    "conventional-changelog-cli": "^2.0.23",
-    "esdoc": "^1.1.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "test": "npm run lint",
+    "start": "node lab5.js",
+    "lint": "eslint ."
   },
   "husky": {
     "hooks": {
