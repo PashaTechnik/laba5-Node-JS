@@ -7,7 +7,8 @@
     "test": "npm run lint",
     "start": "node lab5.js",
     "lint": "eslint .",
-    "prettier": "prettier --config .prettierrc.json --write src/**/*.js"
+    "prettier": "prettier --config .prettierrc.json --write src/**/*.js",
+    "doc": "esdoc --out docs/src/ --readme ./README.md"
   },
   "dependencies": {
     "loadash": "^1.0.0",
