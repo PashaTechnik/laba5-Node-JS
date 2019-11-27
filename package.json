@@ -6,9 +6,7 @@
   "scripts": {
     "test": "npm run lint",
     "prettier": "prettier --config .prettierrc.json --write src/**/*.js",
-    "doc": "esdoc --out docs/src/ --readme ./README.md",
-    "build": "npm run build-js && npm run build-css",
-    "heroku-postbuild": "npm run build"
+    "doc": "esdoc --out docs/src/ --readme ./README.md"
   },
   "engines": {
     "npm": "5.6.0",
