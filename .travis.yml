@@ -5,5 +5,5 @@ notifications:
   email: false
 deploy:
   provider: heroku
-  api_key: 2e3229bb-449f-415c-815f-775e8901bd8a
+  api_key: $key1
   app: pacific-escarpment-98371
