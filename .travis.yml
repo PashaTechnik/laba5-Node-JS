@@ -6,6 +6,6 @@ cache:
   - node_modules
 deploy:
   provider: heroku
-    secure: 2e3229bb-449f-415c-815f-775e8901bd8a
+    secure: $abc
   api_key:
   app: pacific-escarpment-98371
