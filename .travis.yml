@@ -7,5 +7,5 @@ cache:
 deploy:
   provider: heroku
   api_key:
-    secure: $abc
+    secure: \$abc
   app: pacific-escarpment-98371
